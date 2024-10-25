@@ -78,20 +78,28 @@ section.featured-projects {
 }
 
 
-/* Gradient Animation */
+/* Hero Section Styling */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6e40c9, #f03869, #ffcc70);
+    background-size: 300% 300%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @keyframes gradientAnimation {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-.hero {
-    background: linear-gradient(135deg, #6e40c9, #f03869, #ffcc70);
-    background-size: 300% 300%;
-    animation: gradientAnimation 15s ease infinite;
-}
-
+/* CTA Button Styling */
 .btn-primary {
+    padding: 10px 30px;
+    font-size: 1.2rem;
     transition: all 0.3s ease;
 }
 
@@ -100,3 +108,4 @@ section.featured-projects {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
 }
+

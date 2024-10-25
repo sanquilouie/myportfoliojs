@@ -28,13 +28,14 @@
 </nav>
 
 <!-- Hero Section -->
-<header class="hero py-5 text-center text-white" style="background-color: #000;">
+<header class="hero py-5 text-center text-white">
     <div class="container">
-        <h1 class="display-4">Hello, I'm Louie Gene Sanqui</h1>
+        <h1 class="display-4">Hello, I'm <span id="typed"></span></h1>
         <p class="lead">An enthusiastic software developer with expertise in Python, PHP, and Java. I specialize in web development and am passionate about leveraging technology to solve real-world problems.</p>
-        <a href="/projects" class="btn btn-primary btn-lg">Explore My Work</a>
+        <a href="#projects" class="btn btn-primary btn-lg mt-4">Explore My Work</a>
     </div>
 </header>
+
 
 <!-- About Me Preview -->
 <section class="about-preview py-5">
@@ -131,6 +132,15 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    var typed = new Typed("#typed", {
+        strings: ["Louie Gene Sanqui", "a Developer", "a Problem Solver"],
+        typeSpeed: 100,
+        backSpeed: 50,
+        loop: true
+    });
+</script>
 
 </body>
 </html>

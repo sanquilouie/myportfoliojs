@@ -81,7 +81,7 @@ section.featured-projects {
 /* Hero Section Styling */
 .hero {
     min-height: 20vh;
-    background: linear-gradient(135deg, #3c3f41, #6e40c9, #f03869);
+    background: linear-gradient(135deg, #3c3f41, #4c5cbb, #7c4f9d);
     background-size: 300% 300%;
     animation: gradientAnimation 15s ease infinite;
     color: #fff;

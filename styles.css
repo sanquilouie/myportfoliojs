@@ -109,3 +109,29 @@ section.featured-projects {
     transform: scale(1.05);
 }
 
+
+/* Parallax for About me and Skills Sections */
+.parallax {
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Text color */
+    overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+.parallax .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+    z-index: 1; /* Ensure overlay is above background */
+}
+
+.parallax .container {
+    position: relative;
+    z-index: 2; /* Ensure text is above overlay */
+}
+

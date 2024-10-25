@@ -135,3 +135,13 @@ section.featured-projects {
     z-index: 2; /* Ensure text is above overlay */
 }
 
+
+/* Glassmorphism for Feature Projects */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 10px; /* Rounded corners */
+    backdrop-filter: blur(10px); /* Blur effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    color: #fff; /* Text color */
+}
+

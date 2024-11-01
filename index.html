@@ -12,7 +12,7 @@
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">Louie Gene Sanqui</a>
+        <a class="navbar-brand" href="#">L | S</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,8 +27,9 @@
     </div>
 </nav>
 
+<div class="first-page d-flex">
 <!-- Hero Section -->
-<header class="hero py-5 text-center text-white">
+<header id="hero-section" class="hero py-5 text-center text-white">
     <div class="container">
         <h1 class="display-4">Hello, I'm <span id="typed"></span></h1>
         <p class="lead">An enthusiastic software developer with expertise in Python, PHP, and Java. I specialize in web development and am passionate about leveraging technology to solve real-world problems.</p>
@@ -40,14 +41,14 @@
 <!-- About Me Preview -->
 <section class="about-preview py-5 parallax" style="background-image: url('portfolio-bg.jpg');">
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container ">
         <h2 class="text-center">About Me</h2>
         <p class="text-center">I’m a motivated and enthusiastic aspiring programmer with a strong foundation in Python, PHP, and web development. Eager to apply my skills in real-world projects, I’m actively seeking entry-level opportunities to grow and contribute to innovative solutions. My dedication to learning and problem-solving drives me to continuously expand my knowledge and tackle new challenges. <a href="/about">Discover more about my journey and projects</a>.</p>
     </div>
 </section>
-
+</div>
 <!-- Featured Projects -->
-<section class="featured-projects py-5" style="background-color: #222; color: #fff;">
+<section id="featured-projects" class="featured-projects py-5" style="background-color: #222; color: #fff;">
     <div class="container">
         <h2 class="text-center">Featured Projects</h2>
         <div class="row">
@@ -122,7 +123,7 @@
 </section>
 
 <!-- Footer -->
-<footer class="py-4 bg-dark text-white text-center">
+<footer class="py-2 bg-dark text-white text-center">
     <div class="container">
         <p>Connect with me on:</p>
         <a href="https://github.com/yourusername" class="text-white">GitHub</a> |
@@ -144,6 +145,24 @@
         backSpeed: 50,
         loop: true
     });
+
+    document.addEventListener("wheel", (event) => {
+    const heroSection = document.getElementById("hero-section");
+    const featuredProjects = document.getElementById("featured-projects");
+
+    // If the user is in the hero section and scrolls down
+    if (window.scrollY < heroSection.offsetHeight && event.deltaY > 0) {
+        event.preventDefault();
+        featuredProjects.scrollIntoView({ behavior: "smooth" });
+    }
+    // If the user is in the featured projects section and scrolls up
+    else if (window.scrollY >= featuredProjects.offsetTop && event.deltaY < 0) {
+        event.preventDefault();
+        heroSection.scrollIntoView({ behavior: "smooth" });
+    }
+}, { passive: false });
+
+
 </script>
 
 </body>

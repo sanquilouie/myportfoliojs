@@ -151,3 +151,62 @@ section.featured-projects {
     color: #fff; /* Text color */
 }
 
+
+/* Full-height for the first page */
+.first-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+}
+
+.first-page .hero, .first-page .about-preview {
+    flex: 1; /* Equal space vertically */
+    min-height: 50%; /* Ensures each section gets at least half */
+}
+
+/* Remaining Sections Styling */
+section.featured-projects, section.skills {
+    padding: 80px 0; /* Add padding for spacing */
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.about-preview .container, .skills .container, .featured-projects .container {
+    z-index: 2; /* Ensures content above overlay */
+}
+
+.about-preview .overlay, .skills .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay */
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-preview {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 50px 0; /* Adds vertical padding for spacing */
+    text-align: center; /* Center-aligns text */
+}
+
+/* Navbar styling */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+    background-color: #fff; /* Background color for better visibility */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for a subtle effect */
+}

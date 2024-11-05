@@ -204,9 +204,17 @@ section.featured-projects, section.skills {
 
 /* Navbar styling */
 .navbar {
+    padding-top: 0.2rem;      /* Increase padding to make it taller */
+    font-size: 1.2rem;
     position: sticky;
     top: 0;
     z-index: 1000; /* Ensure it stays above other content */
     background-color: #fff; /* Background color for better visibility */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for a subtle effect */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;      /* Make the brand logo text larger */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
